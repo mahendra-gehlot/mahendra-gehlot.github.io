@@ -1,0 +1,7 @@
+title: "Intelligence Notes"
+description: "Detailed Description of Intelligence Notes"
+theme: minima
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
