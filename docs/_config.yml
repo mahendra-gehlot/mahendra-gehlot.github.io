@@ -1,7 +1,22 @@
-title: "Intelligence Notes"
-description: "Detailed Description of Intelligence Notes"
+title: AI and ML Methods Reference
+description: A quick reference guide for various AI and ML methods.
 theme: minima
+
+# For proper navigation links
+baseurl: "/mahendra-gehlot.github.io" # replace with your repo name
+url: "https://mahendra-gehlot.github.io" 
+
+# Exclude files
+exclude:
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+# Build settings
 markdown: kramdown
 kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+  input: GFM
+
+# Plugins
+plugins:
+  - jekyll-feed
