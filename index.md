@@ -3,12 +3,6 @@ title: "Home"
 layout: default
 ---
 
-# Welcome to My Knowledge Base
+# Welcome Intelligence Note
 
-This is the home page of the knowledge base. Here you can find various math equations and pictures.
-
-## Sample Math Equation
-
-$$
-E = mc^2
-$$
+This is the home page of the knowledge base of AI Stuff. Here you can find various math equations and pictures.
