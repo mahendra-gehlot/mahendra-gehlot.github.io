@@ -3,35 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI and ML Methods Reference</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
     <div class="container">
         <nav class="sidebar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="linear_regression.html">Linear Regression</a></li>
-                <li><a href="logistic_regression.html">Logistic Regression</a></li>
-                <li><a href="classification_and_trees.html">Classification and Trees</a></li>
-                <li><a href="neural_networks.html">Neural Networks (NN)</a></li>
-                <li><a href="rnn.html">Recurrent Neural Networks (RNN)</a></li>
-                <li><a href="lstm.html">Long Short-Term Memory (LSTM)</a></li>
-                <li><a href="transformers.html">Transformers</a></li>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/linear_regression' | relative_url }}">Linear Regression</a></li>
+                <li><a href="{{ '/logistic_regression' | relative_url }}">Logistic Regression</a></li>
+                <li><a href="{{ '/classification_and_trees' | relative_url }}">Classification and Trees</a></li>
+                <li><a href="{{ '/neural_networks' | relative_url }}">Neural Networks (NN)</a></li>
+                <li><a href="{{ '/rnn' | relative_url }}">Recurrent Neural Networks (RNN)</a></li>
+                <li><a href="{{ '/lstm' | relative_url }}">Long Short-Term Memory (LSTM)</a></li>
+                <li><a href="{{ '/transformers' | relative_url }}">Transformers</a></li>
             </ul>
         </nav>
         <main class="content">
-            <h1>Welcome to AI and ML Methods Reference</h1>
-            <p>This site is a quick reference guide for various AI and ML methods. Use the navigation panel to explore different algorithms and their details.</p>
-            <ul>
-                <li>Linear Regression</li>
-                <li>Logistic Regression</li>
-                <li>Classification and Trees</li>
-                <li>Neural Networks (NN)</li>
-                <li>Recurrent Neural Networks (RNN)</li>
-                <li>Long Short-Term Memory (LSTM)</li>
-                <li>Transformers</li>
-            </ul>
+            {{ content }}
         </main>
     </div>
 </body>
