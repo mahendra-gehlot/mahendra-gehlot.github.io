@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI and ML Methods Reference</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="left-panel">
-      <!-- Navigation Menu -->
-      <ul>
-        {% for page in site.pages %}
-          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-      </ul>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="linear_regression.html">Linear Regression</a></li>
+                <li><a href="logistic_regression.html">Logistic Regression</a></li>
+                <li><a href="classification_and_trees.html">Classification and Trees</a></li>
+                <li><a href="neural_networks.html">Neural Networks (NN)</a></li>
+                <li><a href="rnn.html">Recurrent Neural Networks (RNN)</a></li>
+                <li><a href="lstm.html">Long Short-Term Memory (LSTM)</a></li>
+                <li><a href="transformers.html">Transformers</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1>Welcome to AI and ML Methods Reference</h1>
+            <p>This site is a quick reference guide for various AI and ML methods. Use the navigation panel to explore different algorithms and their details.</p>
+            <ul>
+                <li>Linear Regression</li>
+                <li>Logistic Regression</li>
+                <li>Classification and Trees</li>
+                <li>Neural Networks (NN)</li>
+                <li>Recurrent Neural Networks (RNN)</li>
+                <li>Long Short-Term Memory (LSTM)</li>
+                <li>Transformers</li>
+            </ul>
+        </main>
     </div>
-    <div class="right-panel">
-      {{ content }}
-    </div>
-  </div>
 </body>
 </html>
