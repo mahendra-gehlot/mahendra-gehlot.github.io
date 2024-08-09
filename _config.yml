@@ -3,8 +3,6 @@
 # Site settings
 title: "My Knowledge Base"
 description: "A collection of chapters on AI, ML, and related topics with equations."
-author: "Your Name"
-baseurl: "/home" 
 url: "https://mahendra-gehlot.github.io" 
 theme: minima
 
