@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.title }}</title> <!-- Accessing site title from _config.yml -->
+  <title>{{ site.title }}</title>
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
 
   <header>
-    <h1>{{ site.title }}</h1> <!-- Accessing site title again -->
-    <p>{{ site.description }}</p> <!-- Accessing site description from _config.yml -->
+    <h1>{{ site.title }}</h1> 
+    <p>{{ site.description }}</p>
     <nav>
       <ul>
         <li><a href="{{ "/" | relative_url }}">Home</a></li>
         <li><a href="{{ "/chapter1/" | relative_url }}">Chapter 1</a></li>
         <li><a href="{{ "/chapter2/" | relative_url }}">Chapter 2</a></li>
         <li><a href="{{ "/chapter3/" | relative_url }}">Chapter 3</a></li>
-        <!-- Add more chapters as needed -->
       </ul>
     </nav>
   </header>
@@ -31,7 +30,6 @@
       <li><a href="{{ "/chapter2/" | relative_url }}">Chapter 2: Linear Regression</a></li>
       <li><a href="{{ "/chapter3/" | relative_url }}">Chapter 3: Neural Networks</a></li>
       <li><a href="{{ "/chapter4/" | relative_url }}">Chapter 4: Transformers</a></li>
-      <!-- Add more chapters as needed -->
     </ul>
   </main>
 
