@@ -65,6 +65,6 @@ permalink: /:categories/:title/
 # Minima theme settings
 minima:
   social_links:
-    twitter: your-twitter-handle
-    github: your-github-username
-    linkedin: your-linkedin-username
+    twitter: mahndra__gehlot
+    github: mahendra-gehlot
+    linkedin: mahendra-gehlot
