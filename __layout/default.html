@@ -1,29 +1,37 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en" }}">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ page.excerpt | strip_html | xml_escape | truncate: 160 }}">
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "{{ site.url | absolute_url }}",
-      "name": "{{ site.title | xml_escape }}",
-      "description": "{{ site.description | xml_escape }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ site.author | xml_escape }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ site.title | xml_escape }}"
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+    <style>
+      /* Custom styles for the two-column layout */
+      .container {
+        display: flex;
+        flex-direction: row;
       }
-    }
-    </script>
-    {% include head-custom.html %}
+      .sidebar {
+        width: 20%;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-right: 1px solid #ddd;
+      }
+      .content {
+        width: 80%;
+        padding: 20px;
+      }
+      .sidebar a {
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: #333;
+      }
+      .sidebar a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -35,10 +43,23 @@
       </div>
     </header>
 
-    <div class="page-content">
-      <div class="wrapper">
+    <div class="container">
+      <!-- Sidebar with page links -->
+      <aside class="sidebar">
+        <h2>Pages</h2>
+        <ul>
+          {% for page in site.pages %}
+            {% if page.title %}
+              <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </aside>
+
+      <!-- Main content area -->
+      <main class="content">
         {{ content }}
-      </div>
+      </main>
     </div>
 
   </body>
