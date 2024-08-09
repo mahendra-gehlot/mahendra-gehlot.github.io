@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title> <!-- Accessing site title from _config.yml -->
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="{{ '/' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/linear_regression' | relative_url }}">Linear Regression</a></li>
-                <li><a href="{{ '/logistic_regression' | relative_url }}">Logistic Regression</a></li>
-                <li><a href="{{ '/classification_and_trees' | relative_url }}">Classification and Trees</a></li>
-                <li><a href="{{ '/neural_networks' | relative_url }}">Neural Networks (NN)</a></li>
-                <li><a href="{{ '/rnn' | relative_url }}">Recurrent Neural Networks (RNN)</a></li>
-                <li><a href="{{ '/lstm' | relative_url }}">Long Short-Term Memory (LSTM)</a></li>
-                <li><a href="{{ '/transformers' | relative_url }}">Transformers</a></li>
-            </ul>
-        </nav>
-        <main class="content">
-            {{ content }}
-        </main>
-    </div>
+
+  <header>
+    <h1>{{ site.title }}</h1> <!-- Accessing site title again -->
+    <p>{{ site.description }}</p> <!-- Accessing site description from _config.yml -->
+    <nav>
+      <ul>
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/chapter1/" | relative_url }}">Chapter 1</a></li>
+        <li><a href="{{ "/chapter2/" | relative_url }}">Chapter 2</a></li>
+        <li><a href="{{ "/chapter3/" | relative_url }}">Chapter 3</a></li>
+        <!-- Add more chapters as needed -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome to My Knowledge Base</h2>
+    <p>This site contains chapters on various topics in AI and ML. Click on the links below to explore the chapters:</p>
+
+    <ul>
+      <li><a href="{{ "/chapter1/" | relative_url }}">Chapter 1: Introduction to AI</a></li>
+      <li><a href="{{ "/chapter2/" | relative_url }}">Chapter 2: Linear Regression</a></li>
+      <li><a href="{{ "/chapter3/" | relative_url }}">Chapter 3: Neural Networks</a></li>
+      <li><a href="{{ "/chapter4/" | relative_url }}">Chapter 4: Transformers</a></li>
+      <!-- Add more chapters as needed -->
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p> <!-- Accessing current year and site title -->
+  </footer>
+
 </body>
 </html>
