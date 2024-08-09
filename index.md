@@ -33,8 +33,6 @@
   </main>
 
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p> <!-- Accessing current year and site title -->
-  </footer>
-
+    <p>&copy; {{ site.time | date: "%Y" }}.Developed jointly by Sayan and Mahendra</p> 
 </body>
 </html>
