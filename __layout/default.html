@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | xml_escape | truncate: 160 }}">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "{{ site.url | absolute_url }}",
+      "name": "{{ site.title | xml_escape }}",
+      "description": "{{ site.description | xml_escape }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ site.author | xml_escape }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title | xml_escape }}"
+      }
+    }
+    </script>
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: "Title" }}</a>
+        <nav class="site-nav">
+          {% include nav.html %}
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+  </body>
+</html>
