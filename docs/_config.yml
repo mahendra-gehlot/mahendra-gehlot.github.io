@@ -1,22 +1,72 @@
-title: AI and ML Methods Reference
-description: A quick reference guide for various AI and ML methods.
+# _config.yml
+
+# Site settings
+title: "My Knowledge Base"
+description: "A collection of chapters on AI, ML, and related topics with equations."
+author: "Your Name"
+baseurl: "/home" 
+url: "https://mahendra-gehlot.github.io" 
 theme: minima
 
-# For proper navigation links
-baseurl: "/mahendra-gehlot.github.io" # replace with your repo name
-url: "https://mahendra-gehlot.github.io" 
-
-# Exclude files
-exclude:
-  - "README.md"
-  - "Gemfile"
-  - "Gemfile.lock"
-
-# Build settings
+# Enable Markdown support for GitHub Pages
 markdown: kramdown
+
+# kramdown settings for math support
 kramdown:
   input: GFM
+  math_engine: mathjax
+  math_engine_opts:
+    preview: "none"
 
 # Plugins
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-toc
+  - jekyll-scholar
+  
+# Pagination settings
+paginate: 5 
+paginate_path: "/page:num/"
+
+# Table of contents settings
+toc:
+  min_level: 2
+  max_level: 3
+
+# Exclude files from the build process
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Include files in the build process
+include:
+  - _pages
+
+# Defaults for posts and chapters
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: post
+      author: "Mahendra Gehlot"
+  - scope:
+      path: "_chapters"
+      type: "chapters"
+    values:
+      layout: chapter
+      author: "Mahendra Gehlot"
+
+# Set the permalink structure
+permalink: /:categories/:title/
+
+# Minima theme settings
+minima:
+  social_links:
+    twitter: your-twitter-handle
+    github: your-github-username
+    linkedin: your-linkedin-username
