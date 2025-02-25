@@ -76,16 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Smooth Scroll for Navigation Links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            gsap.to(window, { 
-                scrollTo: targetElement.offsetTop - 70, // Offset for sticky nav
-                duration: 1, 
-                ease: 'power2.inOut' 
-            });
+    document.querySelectorAll('.nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();  // Stop default anchor behavior
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
         });
     });
 
