@@ -32,7 +32,7 @@
   </main>
 
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }}.Developed by: Sayan and Mahendra</p> 
+    <p>&copy; {{ site.time | date: "%Y" }}.Developed by: Mahendra</p> 
   </footer>
 </body>
 </html>
