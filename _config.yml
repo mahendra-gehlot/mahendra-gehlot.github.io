@@ -1,70 +1,32 @@
-# _config.yml
+# Basic website settings
+title: Mahendra Gehlot - Data Scientist
+description: Portfolio website of Mahendra Gehlot, Data Scientist specialized in Machine Learning, Time Series Prediction, LLMs, and Computer Vision
+author: Mahendra Gehlot
 
-# Site settings
-title: "My Knowledge Base"
-description: "A collection of chapters on AI, ML, and related topics with equations."
-url: "https://mahendra-gehlot.github.io" 
-theme: minima
+# GitHub Pages settings
+url: "https://mahendra-gehlot.github.io" # GitHub Pages domain
+baseurl: "" # Leave empty if your site is in the root
 
-# Enable Markdown support for GitHub Pages
+# Social profiles
+social:
+  github: mahendra-gehlot
+  linkedin: mahendra-gehlot
+  email: connect.mge@gmail.com
+  skype: live:mahendra2baori
+  phone: +917737101405
+
+# Build settings
 markdown: kramdown
-
-# kramdown settings for math support
-kramdown:
-  input: GFM
-  math_engine: mathjax
-  math_engine_opts:
-    preview: "none"
-
-# Plugins
+remote_theme: pages-themes/minimal@v0.2.0
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-remote-theme
   - jekyll-seo-tag
-  - jekyll-paginate
-  - jekyll-toc
-  - jekyll-scholar
-  
-# Pagination settings
-paginate: 5 
-paginate_path: "/page:num/"
 
-# Table of contents settings
-toc:
-  min_level: 2
-  max_level: 3
-
-# Exclude files from the build process
+# Exclude files from being published
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
-
-# Include files in the build process
-include:
-  - _pages
-
-# Defaults for posts and chapters
-defaults:
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: post
-      author: "Mahendra Gehlot"
-  - scope:
-      path: "_chapters"
-      type: "chapters"
-    values:
-      layout: chapter
-      author: "Mahendra Gehlot"
-
-# Set the permalink structure
-permalink: /:categories/:title/
-
-# Minima theme settings
-minima:
-  social_links:
-    twitter: mahndra__gehlot
-    github: mahendra-gehlot
-    linkedin: mahendra-gehlot
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
