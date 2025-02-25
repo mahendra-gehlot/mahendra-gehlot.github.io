@@ -31,6 +31,13 @@ body {
     padding: 0 1rem;
 }
 
+/* Make all images in the entire site responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Header Styles */
 .header {
     padding: 3rem 0;
@@ -48,16 +55,23 @@ body {
     padding: 0 2rem;
 }
 
+/* Updated profile image container sizing */
+.profile-img {
+    flex: 0 0 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Updated profile photo styling */
 .profile-photo {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--primary-color);
-}
-
-.profile-img {
-    flex: 0 0 120px;
+    max-width: 100%;
 }
 
 .profile-avatar {
@@ -216,6 +230,15 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Project image specific styling */
+.project-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
 /* Education Section */
 .education-highlight {
     color: var(--primary-color);
@@ -309,9 +332,17 @@ body {
     .coursework ul, .certifications ul {
         grid-template-columns: 1fr;
     }
-}
-
-@media (max-width: 576px) {
+    
+    /* Updated responsive adjustments for profile image */
+    .profile-img {
+        flex: 0 0 100px;
+    }
+    
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
     .profile-avatar {
         width: 100px;
         height: 100px;
@@ -332,5 +363,13 @@ body {
     
     .experience-header h3, .project-item h3, .education-item h3 {
         font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
     }
 }
