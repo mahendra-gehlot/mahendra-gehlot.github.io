@@ -172,7 +172,7 @@ img {
     padding: var(--section-padding);
     margin-bottom: 3rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    opacity: 0; /* Initial state for animation */
+    opacity: 1; /* Initial state for animation */
 }
 
 .section-title {
