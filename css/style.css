@@ -132,7 +132,6 @@ img {
     backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     padding: 1rem;
-    position: sticky;
     top: 20px;
     z-index: 100;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
